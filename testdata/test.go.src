@@ -1,0 +1,9 @@
+package test
+
+type TestFunc interface {
+    SendOne()
+    CallOne() (string, error)
+    CallMore(arg string, another bool) (bool, error)
+    Stream(string, int) (<-chan string, <-chan error)
+    StreamWithoutErrors(string, int) <-chan string
+}
